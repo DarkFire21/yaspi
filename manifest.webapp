@@ -1,0 +1,13 @@
+{
+  "name": "YASPI"
+  "description": "Yet Another Sliding Puzzle Implementation",
+  "launch_path": "/yaspi",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Periklis Gkolias",
+    "url": "http://127.0.0.1:8080/yaspi"
+  },
+  "default_locale": "en"
+}
