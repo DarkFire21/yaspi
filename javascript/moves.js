@@ -1,6 +1,5 @@
 //array that contains HTML buttons
 var buttons = new Array(9);
-// div element for printing messages to player
 
 function createArray() {
 var canvas = new Array(9);
@@ -10,7 +9,7 @@ for (i=0;i<buttons.length;i++) {
 }
 
 i = 8;
-buttons[i] = '<input type="button" class="game_button" id="E" value=E name="b'+i+'" onclick="handleClick(this)"> </input>';
+buttons[i] = '<input type="button" class="game_button" id="E" name="b'+i+'" onclick="handleClick(this)"> </input>';
 printArray();
 }
 
@@ -20,7 +19,6 @@ function handleClick(obj) {
   var index = getButtonIndex(obj.name);
   var candidates = getAllNeighbors( index ); //get neighbors
   var emptyIndex = hasEmptyBox(candidates);
-  //var x = document.getElementById("msg").style.display="none";
   //if the empty box is a neighbor, swap seats with it
   if (emptyIndex != -1) {
 
@@ -64,7 +62,7 @@ function hasEmptyBox(candidates) {
 
   for(i=0;i<candidates.length;i++) {
 
-    if( buttons[candidates[i]].indexOf("value=E") != -1 ) {
+    if( buttons[candidates[i]].indexOf("id=\"E\"") != -1 ) {
 
       return candidates[i];
     }
@@ -74,24 +72,21 @@ function hasEmptyBox(candidates) {
 return -1;
 }
 
-//At position is the button?
+//At which position is the button?
 function getButtonIndex(name) {
   var n = name[1];
   name = n;
 
-  //console.log("Second char = "+n)
   if( n == null ) {
     n = "value=E";
   }
   var x;
   for(j=0;j<buttons.length;j++) {
 
-    //console.log("Inside getButtonIndex "+j);
 
     if( buttons[j].indexOf(n) !=-1) {
 
       x = j;
-     // console.log("X= "+x);
     }
   }
 
