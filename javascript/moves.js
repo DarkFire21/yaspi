@@ -1,6 +1,6 @@
 //array that contains HTML buttons
 var buttons = new Array(9);
-
+var score = 0;
 function createArray() {
 var canvas = new Array(9);
 for (i=0;i<buttons.length;i++) {
@@ -23,13 +23,16 @@ function handleClick(obj) {
   if (emptyIndex != -1) {
 
     swap(index, emptyIndex);
+	score++;
+	writeScore();
 
     can = document.getElementById("canvas");
     can.innerHTML="";
     printArray();
   }
   else {
-	
+	score--; 
+	writeScore();
 }
   var finished;
   if(isEmpty(buttons[8]) !=-1 ) {
@@ -192,6 +195,13 @@ function printArray() {
 function isEmpty(btn) {
 
   return btn.indexOf("b8");
+}
+
+function writeScore() {
+	var score_elem = document.getElementById("score");
+	
+	score_elem.innerHTML ="Your current score is: "+ score; 
+	
 }
 
 function main() {
