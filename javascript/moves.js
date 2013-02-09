@@ -23,7 +23,7 @@ function handleClick(obj) {
   if (emptyIndex != -1) {
 
     swap(index, emptyIndex);
-	score++;
+	score--;
 	writeScore();
 
     can = document.getElementById("canvas");
@@ -31,8 +31,9 @@ function handleClick(obj) {
     printArray();
   }
   else {
-	score--; 
-	writeScore();
+        if (score == 0) {
+          alert("Game over...please start again!");
+        }
 }
   var finished;
   if(isEmpty(buttons[8]) !=-1 ) {
