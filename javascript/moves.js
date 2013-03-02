@@ -1,6 +1,6 @@
 //array that contains HTML buttons
 var buttons = new Array(9);
-var score = 0;
+var score = 150;
 function createArray() {
 var canvas = new Array(9);
 for (i=0;i<buttons.length;i++) {
