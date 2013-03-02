@@ -7,7 +7,7 @@
   },
   "developer": {
     "name": "Periklis Gkolias",
-    "url": "yaspi.99k.org"
+    "url": "http://localhost:8080/yaspi"
   },
   "default_locale": "en"
 }
