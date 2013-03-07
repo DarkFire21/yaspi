@@ -4,6 +4,10 @@
 </script>
 <script type="text/javascript" src="javascriptjquery.min.js">
 </script>
+<script>
+var manifest_url ="http://darkfire21.github.com/yaspi/manifest.webapp"
+</script>
+ 
 <link rel="stylesheet" href="styles/base.css" type="text/css">
 </head>
 <body onload="main()">
@@ -14,7 +18,9 @@
 
 </div>
 <div id="footer">
-	You may want to <a href="http://localhost:8080/yaspi/manifest.webapp">install</a> this game as a web app
+	<button onclick="navigator.mozApps.install(manifest_url); return false;">
+  Install this awesome app!
+</button>
 </div>
 
 </body>
