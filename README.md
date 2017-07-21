@@ -4,7 +4,7 @@ This is the classic Sliding Puzzle Game, implemented in pure Javascript. It is a
 as a webapp. Feel free to give me your feedback and use the code according to the BSD licence as described below.
 Cheers :)
 
-Copyright (c) 2013, Periklis Gkolias
+Copyright (c) 2013, PeriGk
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
